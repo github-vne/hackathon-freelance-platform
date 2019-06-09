@@ -1,0 +1,134 @@
+.border{
+	width: 1px;
+	height: 40px;
+	background-color: #fff;
+}
+.logo{width: 50px;}
+.burger{display: none;}
+header .container{
+	display: flex;
+	justify-content: space-between;
+}
+header a{
+	font-size: 17px;
+	display: block;
+}
+header{
+	padding: 20px;
+}
+header li{margin-right: 20px;}
+header nav{
+	display: flex;
+}
+.header_left{
+	display: flex;
+	align-items: center;
+}
+.header_left .border{margin: 0 20px;}
+.header_left input{
+	font-size: 20px;
+	background-color: transparent;
+	border: 0;
+}
+.header_left input::-webkit-input-placeholder{color:#fff;font-size: 17px;}
+.header_left input::-moz-placeholder{color:#fff;font-size: 17px;}
+.header_left input:-moz-placeholder{color:#fff;font-size: 17px;}
+.header_left input:-ms-input-placeholder{color:#fff;font-size: 17px;}
+ul{
+	align-items: center;
+	display: flex;
+}
+.last_nav{
+	padding: 15px 40px;
+	background-color: #80d8eb;
+	border-radius: 100px;
+	margin-right: 0px;
+}
+/* FOOTER */
+footer{padding: 40px 0 40px 0;}
+footer a{
+	display: block;
+	margin-top: 20px;
+}
+footer article{align-items: flex-start;}
+footer section p{font-weight: bold}
+.footer_left{
+	display: flex;
+	align-items: center;
+}
+.footer_left_info{
+	height: 57px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.footer_left .border{
+	margin: 0 20px;
+	height: 57px;
+}
+/* MEDIA */
+@media screen and (max-width: 1199px){
+	.black_theme footer article{
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	.black_theme footer section{margin-top: 40px;}
+	.black_theme .footer_left{
+		margin-top: 40px;
+		order: 2;
+	}
+}
+@media screen and (max-width: 992px){
+	.black_theme .last_nav{
+		color: #fff!important;
+		background-color: transparent!important;
+	}
+	.burger{
+		transition: 0.3s;
+		display: block;
+		width: 30px;
+		cursor: pointer;
+	}
+	.header_left input{
+		width: 55px;
+	}
+	header ul{
+		display: none;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	header li{
+		text-align: right;
+		margin-right: 0;
+		margin-top: 10px;
+	}
+	nav{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.last_nav{
+		padding: 0;
+		background-color: transparent;
+	}
+	ul .border{
+		display: none;
+	}
+	header .container{
+		align-items: flex-start;
+	}
+	article{
+		flex-direction: column-reverse;
+	}
+	footer article{
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	footer section{margin-top: 40px;}
+	.footer_left{
+		margin-top: 40px;
+		order: 2;
+	}
+}
