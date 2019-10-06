@@ -18,7 +18,8 @@ function randomEmoji() {
 
 
 const emoji = randomEmoji();
-const user = prompt('Enter your name:');
+// const user = prompt('Enter your name:');
+const user = "Nikolay";
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
