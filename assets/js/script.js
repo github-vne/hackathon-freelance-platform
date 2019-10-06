@@ -1,7 +1,7 @@
 
 // Generate random room name if needed
 if (!location.hash) {
-    location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+    location.hash = 'room';
 }
 const roomHash = location.hash.substring(1);
 const possibleEmojis = [
@@ -222,7 +222,6 @@ function setupDataChannel() {
             insertMessageToDOM(jsonData, false);
         } else {
         console.info(jsonData.content,'субтитры');
-
             user !== jsonData.user ? processSubtitles(jsonData) : false;
         }
     };
@@ -236,7 +235,8 @@ recognition.onresult = (event) => {
     const res = (event.results[0][0].transcript);
     for (let el of event.results){
         console.info(el[0].transcript);
-        sendSubtitles(el[0].transcript,user);
+        sendSubtitles(el[0].transcript)
+        // sendSubtitles(el[0].transcript, user);
     }
 };
 
@@ -244,7 +244,6 @@ function processSubtitles(options) {
     const subtitles = document.getElementById('subtitles');
     subtitles.innerText = options.content;
     //TO DO  
-
 }
 
 function insertMessageToDOM(options, isFromMe) {
@@ -294,13 +293,15 @@ form.addEventListener('submit', () => {
     }
 });
 
-function sendSubtitles(value,user) {
+function sendSubtitles(value) {
 
     const data = {
         type: "subtitles",
-        user: user,
+        user: 'test',
         content: value,
     };
-    dataChannel.send(JSON.stringify(data));
+    $('#subtitles').html(`Наставник: ${value}`);
+    // console.info(data);
+    // dataChannel.send(JSON.stringify(data));
 }
 

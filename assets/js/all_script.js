@@ -23,9 +23,9 @@ $(document).ready(function () {
             for (let el of event.results){
                 console.info(el[0].transcript);
                 if (el[0].transcript.toLowerCase().indexOf('главная')+1 || el[0].transcript.toLowerCase().indexOf('главное')+1){
-                    window.open('/lk/main/','_self');
+                    window.open('lk_main.html','_self');
                 }else if (el[0].transcript.toLowerCase().indexOf('чат')+1 || el[0].transcript.toLowerCase().indexOf('наставник')+1 ){
-                    window.open('/lk/chat/','_self');
+                    window.open('lk_chat.html','_self');
                 }
             }
         };
@@ -34,7 +34,7 @@ $(document).ready(function () {
     $(document).keydown(function (e) {
         if(e.keyCode === 32){
             e.preventDefault();
-            window.location.replace("/lk/main/");
+            window.location.replace("lk_main.html");
         }
     });
 
