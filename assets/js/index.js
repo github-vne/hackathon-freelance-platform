@@ -11,7 +11,9 @@ $(document).ready(function() {
     const synth = window.speechSynthesis;
     const field = document.querySelector(".speech-recognition__words");
     const microphoneIcon = document.querySelector(".speech-recognition__icon");
-    let txtToSay = new SpeechSynthesisUtterance("Ты чё сука.");
+    let txtToSay = new SpeechSynthesisUtterance(
+      "Добро пожаловать в нашу платформу."
+    );
     synth.speak(txtToSay);
   }
 
