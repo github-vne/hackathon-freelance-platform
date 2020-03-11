@@ -1,7 +1,4 @@
 // Generate random room name if needed
-if (!location.hash) {
-  location.hash = "123";
-}
 const roomHash = location.hash.substring(1);
 const possibleEmojis = [
   "🐀",
